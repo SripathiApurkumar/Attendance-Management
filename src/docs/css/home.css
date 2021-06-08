@@ -1,0 +1,30 @@
+#home{
+     background-image: url('../imgs/back2.jpg'); 
+     height: 100vh;
+     background-size: cover;
+
+    /* float: left; */
+    overflow: hidden;
+     /* width: 100vw;  */
+    /* image-resolution: 100vh; */
+    /* position: relative; */
+    /* margin-top: 90px; */
+    margin-top: 1px;
+    padding-top: 150px;
+    border-top: 20px;
+    background-repeat: no-repeat;
+    /* background-position: top center;
+    background-size: 100vh;  */
+    padding-bottom: 60px;
+    padding-bottom: 52px;
+    /* background-color: #369ee6; */
+}
+#home button{
+    color: black;
+    background-color: cornsilk;
+}
+#headi{
+/*background-color: rgb(155, 224, 236);*/
+color: azure;
+font-weight: bolder;
+}

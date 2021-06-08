@@ -1,0 +1,84 @@
+.home-header-section
+{
+    background-color:rgb(40, 200, 221);
+    height: 7%;
+    background-size: cover;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.set-logo-shape
+{
+    height: 45px;
+    width: 40px;
+}
+.set-headings
+{
+    font-size: 25px;
+    padding-left: 0px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+.carousel-set-prop
+{
+    height: 400px;
+    width:auto;
+    margin:auto;
+}
+#head-of-a1
+{
+    color:red;
+    /* display: none; */
+}
+
+.notify{
+    background-color: #218838;
+}
+
+.qd{
+    width: 80%;
+}
+
+.course{
+    cursor: pointer;
+}
+
+.test{
+    cursor: pointer;
+}
+
+/* .options{
+    display: flex;
+    justify-content: start;
+    margin-left: 50px;
+} */
+
+.test:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and  (max-width:440px){
+    .carousel-set-prop
+    {
+        width:100%;
+    }
+    .set-headings
+    {
+        font-size: x-large;
+        padding-right: 10px;
+        padding-top: 0px;
+    }
+    #head-of-a1
+    {
+        display:block;
+    }
+    .home-header-section{
+        justify-content: flex-start;
+        justify-items: start;
+    }
+
+}
+.carousel-background
+{
+    background-color:khaki;
+}
