@@ -78,7 +78,7 @@ class AddAdmin extends Component {
                  {this.state.loader?<Spinner></Spinner>:null}
             <div className="form  col-xl-4 col-lg-5 col-md-6 col-sm-8 col-10 m-auto my-auto">
                 {/* col-xl-5 col-lg-6 col-md-7 col-sm-8 col-10 */}
-                <h1 className="m-3 mb-4">Add {localStorage.getItem('role')==='student'?"Student":"Teacher"}</h1>
+                <h1 className="m-3 mb-4">Add {localStorage.getItem('role')==='student'?"Student":localStorage.getItem('role')==="teacher"?"Teacher":"Admin"}</h1>
                 <div>
                 <FormGroup className="form-inline ">
                     <FormLabel className="form-label">Admin Id</FormLabel>

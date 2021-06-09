@@ -35,6 +35,7 @@ import TeacherUpdateLink from './components/TeacherUpdateLink';
 import AddAdmin from './components/AddAdmin';
 import AdminViewStudentCourse from './components/AdminViewStudentCourse';
 import ForgotPassword from './components/ForgotPassword';
+import AdminPasswordUpdate from './components/AdminPasswordUpdate';
 
 
 class App extends Component {
@@ -126,6 +127,9 @@ class App extends Component {
                   </Route>
                   <Route exact path="/student/updatePassword">
                     <UpdatePassword/>
+                  </Route>
+                  <Route exact path="/admin/updatePassword">
+                    <AdminPasswordUpdate/>
                   </Route>
                   <Route exact path="/forgotPassword">
                     <ForgotPassword/>

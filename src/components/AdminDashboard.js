@@ -14,12 +14,8 @@ export class AdminDashboard extends Component {
     
         this.state = {
             user : JSON.parse(localStorage.getItem('user')),
-            //courses : [],
-            //time : {},
             seconds : 200
         }
-        //this.timer = 0;
-        //this.countDown = this.countDown.bind(this);
     }
 
     logout = ()=>{
@@ -27,31 +23,6 @@ export class AdminDashboard extends Component {
         localStorage.clear();
         this.props.history.push('/');
     }
-
-    // componentDidMount(){
-    //     console.log(localStorage.getItem('user'))
-    //     fetch({
-    //         method : 'post',
-    //         body : JSON.stringify({
-    //             adminId : this.state.user.adminId
-    //         }),
-    //         headers : {
-    //             'Content-type' : 'application/json',
-    //             Authorization : localStorage.getItem('token')
-    //         }
-    //     }).then(res => {
-    //         return res.json();
-    //     }).then(res => {
-    //         console.log(res)
-    //         // if(res.status == 200){
-    //         //     this.setState({
-    //         //         courses : res.results
-    //         //     })
-    //         // }
-    //     }).catch(err => {
-    //         console.log(err);
-    //     })
-    // }
 
     render() {
         const user = JSON.parse(localStorage.getItem('user'));
@@ -61,8 +32,6 @@ export class AdminDashboard extends Component {
               <Popover.Content>
                 <b className="h5">{user.adminId}</b> <br/>
                 {user.name} <br/>
-                {/*<Button onClick={()=>this.props.history.push("/student/ViewProfile")} className="w-100 m-1">View Profile</Button>
-                {/*<Button onClick={()=>this.props.history.push("/student/updateProfile")} className="w-100 m-1">Edit Profile</Button>*/}
                 <Button onClick={()=>this.props.history.push("/admin/updatePassword")} className="w-100 m-1"> Edit Password </Button>
                 <Button onClick={()=>this.props.history.push("/admin/addAdmin")} className="w-100 m-1"> Add Admin </Button>
               </Popover.Content>
@@ -84,9 +53,6 @@ export class AdminDashboard extends Component {
                         </OverlayTrigger>
     
                         <button className="float-right mr-2 mt-1 inline btn btn-success border border-1 green" onClick={()=>this.logout()}>Logout</button>
-                        {/* <button className="small ui icon button float-right mr-2 btn-success notify mt-1 border border-1" width="20" height="20">
-                            <i className="bell icon " ></i>
-                        </button> */}
                         </span>:
                         <span>
                             <button className="float-right mr-2 mt-1 inline btn btn-success border border-1" onClick={()=>this.props.history.push('/register')}>Register</button>
@@ -94,26 +60,21 @@ export class AdminDashboard extends Component {
                         </span>
                         }
                         <h1 className="inline set-headings">Attendance Management System</h1>
-                        {/* <h3 id="head-of-a1" className="mt-1">Examination</h3> */}
                 </div>
             <div id="dpic">
                 <div id="dc">
                 <br/>
                 <br/>
                 <button onClick={()=>{
-                        {/*localStorage.setItem('role',"student")*/}
                         this.props.history.push('/admin/addStudents')
                     }}  className="btn btn-primary col-md-4 m-4 border border-2">Add Students</button>
                 <button onClick={()=>{
-                        {/*localStorage.setItem('role',"teacher")*/}
                         this.props.history.push('/admin/addTeachers')
                     }}  className="btn btn-primary col-md-4 m-4 border border-2">Add Teachers</button>
                 <button onClick={()=>{
-                        {/*localStorage.setItem('role',"admin")*/}
                         this.props.history.push('/admin/addCourses')
                     }}  className="btn btn-primary col-md-4 m-4 border border-2">Add Courses</button>
                 <button onClick={()=>{
-                        {/*localStorage.setItem('role',"admin")*/}
                         this.props.history.push('/admin/addStudentCourse')
                     }}  className="btn btn-primary col-md-4 m-4 border border-2">Assign Courses</button>
                 <button onClick={()=>{
@@ -121,19 +82,15 @@ export class AdminDashboard extends Component {
                         this.props.history.push('/admin/viewStudents')
                     }}  className="btn btn-primary col-md-4 m-4 border border-2">View Students</button>
                 <button onClick={()=>{
-                        {/*localStorage.setItem('role',"admin")*/}
                         this.props.history.push('/admin/viewTeachers')
                     }}  className="btn btn-primary col-md-4 m-4 border border-2">View Teachers</button>
                 <button onClick={()=>{
-                        {/*localStorage.setItem('role',"admin")*/}
                         this.props.history.push('/admin/viewCourses')
                     }}  className="btn btn-primary col-md-4 m-4 border border-2">View Courses</button>
                 <button onClick={()=>{
-                        {/*localStorage.setItem('role',"admin")*/}
                         this.props.history.push('/admin/viewStudentCourses')
                     }}  className="btn btn-primary col-md-4 m-4 border border-2">Student courses</button>
                 </div>
-                { /* <Button className="m-1" onClick={()=>this.props.history.push('/student/ViewProfile')}>View Profile</Button> */}
             </div>
             </div>
         )
