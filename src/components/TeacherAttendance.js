@@ -110,6 +110,8 @@ class StudentAttendance extends Component {
     render() {
         // var date = new Date(this.state.dateTime);
         // var dt = date.toString().split("G")[0];
+        const pre=0;
+        const abs=0;
         return (
             <div className="m-2">
                 {this.state.loader===true?
@@ -171,7 +173,14 @@ class StudentAttendance extends Component {
                                                 <Td>{student.time}</Td>
                                                 <Td>{student.status===1?'Present':'Absent'}</Td>
                                             </Tr>
+                                            
                                         )
+                                        // if(student.status===1){
+                                        //      pre = pre+1
+                                        // }
+                                        // else{
+                                        //     abs = abs+1
+                                        // }
                                     })
                                 }
                             </Tbody>
@@ -182,6 +191,12 @@ class StudentAttendance extends Component {
                             
                 </div>
                 }
+                <div>
+                    Present Count : {pre}
+                </div>
+                <div>
+                    Absent Count : {abs}
+                </div>
                 <div className="text-center m-2">
                         <button className="btn btn-secondary" onClick={this.props.history.goBack}>Back</button>
                     </div>

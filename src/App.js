@@ -1,25 +1,18 @@
-// import logo from './logo.svg';
 import './App.css';
 import {HashRouter as Router,Route,Switch} from 'react-router-dom'
 import {Offline, Online} from 'react-detect-offline'
 import Home from './components/Home';
 import {Component} from 'react'
-//import Student from './components/Student';
 import Login from './components/Login';
-//import AdminLogin from './components/AdminLogin';
-// import Register from './components/Register';
 import AddStudent from './components/AddStudent';
-// import TeacherRegister from './components/TeacherRegister';
 import AdminDashboard from './components/AdminDashboard';
 import Dashboard from './components/Dashboard';
 import TeacherDashboard from './components/TeacherDashboard'
 import './docs/css/header.css'
-// import Course from './components/Course';
 import UpdateStudent from './components/UpdateStudent';
 import UpdateTeacher from './components/UpdateTeacher';
 import UpdateTeacherPassword from './components/UpdateTeacherPassword';
 import UpdatePassword from './components/UpdatePassword';
-// import StudentCourse from './components/StudentCourse'
 import ViewProfile from './components/ViewProfile';
 import TeacherProfile from './components/TeacherProfile';
 import AddStudentCourse from './components/AddStudentCourse';
@@ -110,12 +103,6 @@ class App extends Component {
                   <Route exact path="/teacher/updateTeacherPassword">
                     <UpdateTeacherPassword/>
                   </Route>
-                  {/* <Route exact path="/teacher/course">
-                    <Course/>
-                  </Route> */}
-                  {/* <Route exact path="/student/course">
-                    <StudentCourse/>
-                  </Route> */}
                   <Route exact path="/student/updateProfile">
                     <UpdateStudent/>
                   </Route>
