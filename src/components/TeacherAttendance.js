@@ -175,12 +175,7 @@ class StudentAttendance extends Component {
                                             </Tr>
                                             
                                         )
-                                        // if(student.status===1){
-                                        //      pre = pre+1
-                                        // }
-                                        // else{
-                                        //     abs = abs+1
-                                        // }
+                                        
                                     })
                                 }
                             </Tbody>
@@ -191,12 +186,7 @@ class StudentAttendance extends Component {
                             
                 </div>
                 }
-                <div>
-                    Present Count : {pre}
-                </div>
-                <div>
-                    Absent Count : {abs}
-                </div>
+
                 <div className="text-center m-2">
                         <button className="btn btn-secondary" onClick={this.props.history.goBack}>Back</button>
                     </div>

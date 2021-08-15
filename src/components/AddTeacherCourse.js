@@ -52,6 +52,14 @@ class AddTeacherCourse extends Component {
               alert("registered successfully");
               this.props.history.push('/admin/dashboard');
             }
+            if(res.status===401) {
+                alert("Course ID doesnot Exists!!");
+                this.props.history.push('/admin/dashboard');
+              }
+              if(res.status===400) {
+                alert("Teacher ID doesnot exists!!");
+                this.props.history.push('/admin/dashboard');
+              }
             this.setState({
                 loader : false
             })

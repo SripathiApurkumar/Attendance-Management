@@ -45,6 +45,15 @@ class AddStudentCourse extends Component {
             if(res.status===200) {
               alert("registered successfully")
             }
+            if(res.status===402) {
+                alert("Details Already Exists!!")
+              }
+              if(res.status===401) {
+                alert("Course Does not Exists!!")
+              }
+              if(res.status===403) {
+                alert("Student ID doesnot Exists!!")
+              }
             this.setState({
                 loader : false
             })
