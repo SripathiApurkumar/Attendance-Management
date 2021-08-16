@@ -73,7 +73,7 @@ class AdminViewTeachers extends Component {
     deleteTeacher=(teacherId)=>{
         if(teacherId!=='' && teacherId!== null){
             this.setState({loader:true})
-            fetch(`http://attendxyz.herokuapp.com/admin/deleteTeacher/${teacherId}`,{
+            fetch(`https://attendxyz.herokuapp.com/admin/deleteTeacher/${teacherId}`,{
                 method : 'delete',
                 headers : {
                     'Content-type' : 'application/json',
